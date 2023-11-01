@@ -1,6 +1,7 @@
 import { useState } from "react";
+import sendIcon from '../../public/send.png';
 import { sendMessage, isTyping } from "react-chat-engine";
-import { SendOutlined, PictureOutlined } from "@ant-design/icons";
+import { SendOutlined, PictureOutlined, PaperClipOutlined } from "@ant-design/icons";
 
 const MessageForm = (props) => {
     const [value, setValue] = useState("");
@@ -38,7 +39,14 @@ const MessageForm = (props) => {
             />
             <label html-for="upload-button">
                 <span className="image-button">
-                    <PictureOutlined className="picture-icon" />
+                    <PaperClipOutlined 
+                        className="picture-icon" 
+                        style={{
+                            ...{ cursor: 'pointer', position: 'relative',  fontSize: '30px' },
+                            // TODO: implement color change on hover
+                            ...{ color: '#7554a0' }
+                        }}
+                    />
                 </span>
             </label>
             <input 
@@ -49,7 +57,7 @@ const MessageForm = (props) => {
                 onClick={handleUpload}
             />
             <button type="submit" className="send-button">
-                <SendOutlined className="send-icon"/>
+                <img src={sendIcon} className="send-icon" alt="" />
             </button>
         </form>
     )
