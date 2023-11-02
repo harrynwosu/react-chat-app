@@ -1,5 +1,5 @@
 import { useState } from "react";
-import sendIcon from '../../public/send.png';
+import sendIcon from '../images/send.png';
 import { sendMessage, isTyping } from "react-chat-engine";
 import { SendOutlined, PictureOutlined, PaperClipOutlined } from "@ant-design/icons";
 

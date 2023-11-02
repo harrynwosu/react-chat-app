@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 const projectID = "a37eb189-2b03-4a35-8c8a-2769881f545d";
 
@@ -7,6 +8,7 @@ export const LoginForm = () => {
     const [username, setusername] = useState("");
     const [password, setpassword] = useState ("");
     const [loginError, setLoginError] = useState("");
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -22,7 +24,7 @@ export const LoginForm = () => {
 
             //implement 'Remember credentials' feature
 
-            window.location.reload();
+            navigate('/');
         } catch (error) {
             setLoginError("Incorrect username or password");
         }
