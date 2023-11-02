@@ -1,7 +1,8 @@
 import { ChatSettings } from "react-chat-engine";
 import { useNavigate } from 'react-router-dom';
+import { LoginOutlined } from "@ant-design/icons";
 
-export const CustomChatSettings = (props) => {
+const CustomChatSettings = (props) => {
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -16,8 +17,11 @@ export const CustomChatSettings = (props) => {
             <div className="logout-button-container">
                 <button className="logout-button" onClick={handleClick}>
                     <span>Log Out</span>
+                    <LoginOutlined className="logout-icon" style={{marginLeft: '5px'}}/>
                 </button>
             </div>
         </div>
     )
 }
+
+export default CustomChatSettings;

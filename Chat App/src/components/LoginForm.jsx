@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
+import { GoogleOutlined, FacebookOutlined } from "@ant-design/icons";
 
 const projectID = "a37eb189-2b03-4a35-8c8a-2769881f545d";
 

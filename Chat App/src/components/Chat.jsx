@@ -1,8 +1,8 @@
 import React from "react";
-import { ChatEngine } from "react-chat-engine";
+import { ChatEngine, ChatHeader } from "react-chat-engine";
 
 import ChatFeed from "./ChatFeed";
-import { CustomChatSettings } from "./CustomChatSettings";
+import CustomChatSettings from "./CustomChatSettings";
 
 
 import "../App.css";
