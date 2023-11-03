@@ -12,9 +12,9 @@
 }
     
 .theme-user-container{
-width: 25%;
-display: flex;
-justify-content: space-between;
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .logout-button-container {
@@ -25,15 +25,15 @@ justify-content: space-between;
 }
   
 .logout-button {
-color: red;
-height: 42px;
-width: 100%;
-cursor: pointer;
-border-radius: 6px !important;
-border: 1px solid red !important;
+    color: red;
+    height: 42px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 6px !important;
+    border: 1px solid red !important;
 }
 
 .logout-button:hover {
-color: white;
-background-color: red;
+    color: white;
+    background-color: red;
 }

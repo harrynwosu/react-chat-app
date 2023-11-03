@@ -5,31 +5,31 @@
 }
   
 .google-button {
-color: white;
-font-size: 1.2rem;
-    margin: 0 auto;
-padding: 1.5rem 2rem;
-border-radius: 0.2rem;
-background-color: transparent;
-border: none;
-border-bottom: 0.3rem solid transparent;
-transition: all 0.3s;
-outline: none;
-margin-bottom: 25px;
+    color: white;
+    font-size: 1.2rem;
+        margin: 0 auto;
+    padding: 1.5rem 2rem;
+    border-radius: 0.2rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+    outline: none;
+    margin-bottom: 25px;
 }
 
 .facebook-button {
-color: white;
-font-size: 1.2rem;
-    margin: 0 auto;
-padding: 1.5rem 2rem;
-border-radius: 0.2rem;
-background-color: transparent;
-border: none;
-border-bottom: 0.3rem solid transparent;
-transition: all 0.3s;
-outline: none;
-margin-bottom: 25px;
+    color: white;
+    font-size: 1.2rem;
+        margin: 0 auto;
+    padding: 1.5rem 2rem;
+    border-radius: 0.2rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+    outline: none;
+    margin-bottom: 25px;
 }
 
 .error {
