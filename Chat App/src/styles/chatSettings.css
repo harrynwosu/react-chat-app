@@ -1,0 +1,39 @@
+/* CUSTOM CHAT SETTINGS */
+
+.chat-settings-options {
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 72px;
+    padding: 20px;
+    border-left: 1px solid rgb(175, 175, 175);
+    border-bottom: 1px solid rgb(175, 175, 175);
+}
+    
+.theme-user-container{
+width: 25%;
+display: flex;
+justify-content: space-between;
+}
+
+.logout-button-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 18px;
+}
+  
+.logout-button {
+color: red;
+height: 42px;
+width: 100%;
+cursor: pointer;
+border-radius: 6px !important;
+border: 1px solid red !important;
+}
+
+.logout-button:hover {
+color: white;
+background-color: red;
+}

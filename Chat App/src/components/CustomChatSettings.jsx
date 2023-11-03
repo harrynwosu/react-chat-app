@@ -1,6 +1,6 @@
 import { ChatSettings } from "react-chat-engine";
 import { useNavigate } from 'react-router-dom';
-import { LoginOutlined } from "@ant-design/icons";
+import { BgColorsOutlined, LoginOutlined, UserOutlined, } from "@ant-design/icons";
 
 const CustomChatSettings = (props) => {
     const navigate = useNavigate();
@@ -12,6 +12,12 @@ const CustomChatSettings = (props) => {
 
     return (
         <div className="ce-custom-chat-settings-container">
+            <div className="chat-settings-options">
+                <div className="theme-user-container">
+                <BgColorsOutlined className="theme-button" style={{fontSize: '30px', color: 'rgb(117,84,160)'}}/>
+                <UserOutlined className="user-button" style={{fontSize: '30px', color: 'rgb(117,84,160)'}}/>
+                </div>
+            </div>
             <ChatSettings {...props}/>
 
             <div className="logout-button-container">

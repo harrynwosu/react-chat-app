@@ -28,6 +28,8 @@ export const LoginForm = () => {
             navigate('/');
         } catch (error) {
             setLoginError("Incorrect username or password");
+            setusername('');
+            setpassword('');
         }
 
     }
@@ -45,6 +47,16 @@ export const LoginForm = () => {
                         </button>
                     </div>
                     <h2 className="error">{loginError}</h2>
+                    <div align="center" className="social-logins-container" >
+                        <button className="google-button">
+                            <GoogleOutlined />
+                            <span style={{marginLeft: '10px'}}>Google</span>
+                        </button>
+                        <button className="facebook-button">
+                            <FacebookOutlined />
+                            <span style={{marginLeft: '10px'}}>Facebook</span>
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>

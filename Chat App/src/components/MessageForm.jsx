@@ -24,8 +24,8 @@ const MessageForm = (props) => {
         isTyping(props, chatId);
     }
 
-    const handleUpload = (event) => {
-        sendMessage(creds, chatId, {files: e.target.files, text:''});
+    const handleUpload = (e) => {
+        sendMessage(creds, chatId, { files: e.target.files, text: '' });
     }
 
     return (
@@ -37,9 +37,9 @@ const MessageForm = (props) => {
                 onChange={handleChange}
                 onSubmit={handleSubmit}
             />
-            <label html-for="upload-button">
+            <label htmlFor="upload-button">
                 <span className="image-button">
-                    <PaperClipOutlined 
+                    <PictureOutlined 
                         className="picture-icon" 
                         style={{
                             ...{ cursor: 'pointer', position: 'relative',  fontSize: '30px' },
@@ -54,7 +54,7 @@ const MessageForm = (props) => {
                 multiple={false}
                 id="upload-button"
                 style={{display: 'none'}}
-                onClick={handleUpload}
+                onChange={handleUpload}
             />
             <button type="submit" className="send-button">
                 <img src={sendIcon} className="send-icon" alt="" />

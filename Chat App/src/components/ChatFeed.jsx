@@ -52,6 +52,7 @@ const ChatFeed = (props) => {
                 <div className="chat-title">{chat.title}</div>
                 <div className="chat-subtitle">
                     {`${chat.people.length} ${chat.people.length > 0 ? 'members' : 'member'}`}
+                    {`, ${chat.people.filter((person) => person.person.is_online).length} online`}
                     {/* {chat.people.map((person) => `${person.person.username} `)} */}
                 </div>
             </div>
