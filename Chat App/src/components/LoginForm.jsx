@@ -3,11 +3,12 @@ import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 import { GoogleOutlined, FacebookOutlined } from "@ant-design/icons";
 
-const projectID = "a37eb189-2b03-4a35-8c8a-2769881f545d";
+const projectID = import.meta.env.VITE_PROJECT_ID;
+const userSecret = import.meta.env.VITE_USER_SECRET;
 
 export const LoginForm = () => {
-    const [username, setusername] = useState("");
-    const [password, setpassword] = useState ("");
+    const [username, setusername] = useState("jakegyllenhaal");
+    const [password, setpassword] = useState (userSecret);
     const [loginError, setLoginError] = useState("");
     const navigate = useNavigate();
 
@@ -22,8 +23,6 @@ export const LoginForm = () => {
             // credentials persist to prevent subsequent logins
             localStorage.setItem('username', username);
             localStorage.setItem('password', password);
-
-            //implement 'Remember credentials' feature
 
             navigate('/');
         } catch (error) {
