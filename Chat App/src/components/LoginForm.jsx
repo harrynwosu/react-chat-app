@@ -49,11 +49,11 @@ export const LoginForm = () => {
                     <h2 className="error">{loginError}</h2>
                     <div align="center" className="social-logins-container" >
                         <button className="google-button">
-                            <GoogleOutlined />
+                            <GoogleOutlined className="google-icon"/>
                             <span style={{marginLeft: '10px'}}>Google</span>
                         </button>
                         <button className="facebook-button">
-                            <FacebookOutlined />
+                            <FacebookOutlined className="facebook-icon"/>
                             <span style={{marginLeft: '10px'}}>Facebook</span>
                         </button>
                     </div>

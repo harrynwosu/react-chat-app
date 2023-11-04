@@ -1,7 +1,7 @@
 /* CUSTOM CHAT SETTINGS */
 
 .chat-settings-options {
-    background-color: rgb(240, 240, 240);
+    background-color: var(--app-bg-color);
     display: flex;
     justify-content: center;
     width: 100%;
@@ -11,8 +11,8 @@
     border-bottom: 1px solid rgb(175, 175, 175);
 }
     
-.theme-user-container{
-    width: 25%;
+.theme-github-user-container{
+    width: 45%;
     display: flex;
     justify-content: space-between;
 }
@@ -25,7 +25,7 @@
 }
   
 .logout-button {
-    color: red;
+    color: var(--logout-color);
     height: 42px;
     width: 100%;
     cursor: pointer;
@@ -35,5 +35,11 @@
 
 .logout-button:hover {
     color: white;
-    background-color: red;
+    background-color: var(--logout-color);
+}
+
+.settings-button {
+    cursor: pointer;
+    font-size: var(--settings-icons-font) !important;
+    color: var(--icons-color) !important;
 }

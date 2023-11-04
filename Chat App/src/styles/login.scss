@@ -5,7 +5,8 @@
 }
   
 .google-button {
-    color: white;
+    color: var(--login-button-text);
+    cursor: pointer;
     font-size: 1.2rem;
         margin: 0 auto;
     padding: 1.5rem 2rem;
@@ -13,13 +14,25 @@
     background-color: transparent;
     border: none;
     border-bottom: 0.3rem solid transparent;
-    transition: all 0.3s;
     outline: none;
     margin-bottom: 25px;
+    transition: color 0.3s ease;
+}
+
+.google-button:hover {
+    background-image: var(--google-gradient);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.google-button:hover .google-icon {
+    color: var(--login-button-text);
 }
 
 .facebook-button {
-    color: white;
+    color: var(--login-button-text);
+    cursor: pointer;
     font-size: 1.2rem;
         margin: 0 auto;
     padding: 1.5rem 2rem;
@@ -27,9 +40,20 @@
     background-color: transparent;
     border: none;
     border-bottom: 0.3rem solid transparent;
-    transition: all 0.3s;
     outline: none;
     margin-bottom: 25px;
+    transition: color 0.3s ease;
+}
+
+.facebook-button:hover {
+    background-image: var(--facebook-gradient);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.facebook-button:hover .facebook-icon {
+    color: var(--login-button-text);
 }
 
 .error {

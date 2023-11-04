@@ -4,7 +4,7 @@
     height: 100%;
     width: 100%;
     overflow: scroll;
-    background-color: rgb(240, 240, 240);
+    background-color: var(--app-bg-color);
 }
   
 .chat-title-container {
@@ -14,13 +14,13 @@
 }
 
 .chat-title {
-    color: #7554a0;
+    color: var(--title-color);
     font-weight: 800;
     font-size: 24px;
 }
 
 .chat-subtitle {
-    color: #7554a0;
+    color: var(--subtitle-color);
     font-weight: 600;
     font-size: 12px;
     padding-top: 4px;
@@ -151,4 +151,23 @@
         &:hover {
             color: #3b2a50 !important;
         }
+}
+
+.main-loader {
+    position: absolute !important;
+    top: 45% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.loading-image {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 150px !important
+}
+
+.loading-image img {
+    max-height: 100px !important;
 }

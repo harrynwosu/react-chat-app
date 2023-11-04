@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500&display=swap');
+
+@import "chatFeed.scss";
+@import "chatSettings.scss";
+@import "forms.scss";
+@import "login.scss";
+
+:root {
+  --margin-top: 20px;
+  --active-hover: #3b2a50;
+  --app-bg-color: rgb(240, 240, 240);
+  --facebook-gradient: linear-gradient(to right, #0A2C6B,  #0D3D8C, #256BBE, #FFFFFF);
+  --form-icon-font: 30px;
+  --google-gradient: linear-gradient(to right, #4285F4, #EA4335, #FBBC05, #34A853);
+  --icons-color: rgb(117,84,160);
+  --login-button-text: white;
+  --logout-color: red;
+  --own-message-color: #7554a0;
+  --settings-icons-font: 30px;
+  --subtitle-color: #7554a0;
+  --their-message-color: #FFFFFF;
+  --title-color: #7554a0;
+
+  // --icons-color: #f8eded73;
+  --new-chat-focus: #5e64759f;
+  
+  
+  --own-msg-color: #726dfe;
+  --their-message-text-color: rgba(255, 255, 255, 0.705);
+  // --title-color: rgba(255, 255, 255, 0.925);
+  --message-text-color: rgba(255, 255, 255, 0.877);
+}
+
+.dark {
+  --margin-top: 20px;
+  --active-hover: #3b2a50;
+  --app-bg-color: rgb(240, 240, 240);
+  --bg-color: rgb(240, 240, 240);
+  --facebook-gradient: linear-gradient(to right, #0A2C6B,  #0D3D8C, #256BBE, #FFFFFF);
+  --form-icon-font: 30px;
+  --google-gradient: linear-gradient(to right, #0A2C6B,  #0D3D8C, #256BBE, #FFFFFF);
+  --icons-color: rgb(117,84,160);
+  --logout-color: red;
+  --own-message-color: #7554a0;
+  --settings-icons-font: 30px;
+  --subtitle-color: #7554a0;
+  --their-message-color: #FFFFFF;
+  --title-color: #7554a0;
+
+  // --icons-color: #f8eded73;
+  --new-chat-focus: #5e64759f;
+  
+  
+  --own-msg-color: #726dfe;
+  --their-message-text-color: rgba(255, 255, 255, 0.705);
+  // --title-color: rgba(255, 255, 255, 0.925);
+  --message-text-color: rgba(255, 255, 255, 0.877);
+}
+
+/* CHAT STYLES */
+* {
+  font-family: 'Playpen Sans', cursive;
+  letter-spacing: 0.5px;
+}
+
+.ce-chat-list {
+  background-color: rgb(240, 240, 240) !important;
+}
+
+.ce-chats-container {
+  background-color: rgb(240, 240, 240) !important;
+}
+
+.ce-active-chat-card {
+  background-color: #cabcdc !important;
+  border: 4px solid #cabcdc !important;
+  border-radius: 0px !important;
+}
+
+.ce-chat-subtitle-text {
+  color: #595959 !important;
+}
+
+.ce-chat-form-container {
+  padding-bottom: 20px !important;
+}
+
+.ce-text-input {
+  border-radius: 6px !important;
+  border: 1px solid #3b2a50 !important;
+}
+
+.ce-primary-button {
+  border-radius: 6px !important;
+  background-color: #7554a0 !important;
+  position: relative;
+  bottom: 1px;
+}
+
+.ce-danger-button {
+  background-color: white !important;
+  border-radius: 22px !important;
+}
+
+.ce-settings {
+  background-color: rgb(240, 240, 240) !important;
+}
+
+.ce-autocomplete-input {
+  border-radius: 6px !important;
+  border: 1px solid #3b2a50 !important;
+}
+
+.ce-autocomplete-options {
+  border-radius: 6px !important;
+  border: 1px solid #3b2a50 !important;
+  background-color: white !important;
+}
+
+.ce-chat-settings-container {
+  padding-top: 12px !important;
+}
+
+.ce-chat-avatars-row {
+  display: none !important;
+}
+
+.ce-custom-chat-settings-container {
+  height: calc(100% - 72px);
+}

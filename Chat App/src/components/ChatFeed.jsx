@@ -1,11 +1,23 @@
+import { useState, useEffect } from "react";
+
 import MessageForm from "./MessageForm";
 import MyMessage from "./MyMessage";
 import TheirMessage from "./TheirMessage";
+import loadingAnimation from "../images/loading.svg";
 
 const ChatFeed = (props) => {
     const {chats, activeChat, userName, messages} = props;
+    const [isLoading, setIsLoading] = useState(true);
 
     const chat = chats && chats[activeChat];
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsLoading(false)
+        }, 1000);
+
+        return () => clearTimeout(timer);
+    }, []);
 
     const renderReadReceipts = (message, isMyMessage) => {
         return chat.people.map((person, index) => person.last_read === message.id && (
@@ -44,7 +56,21 @@ const ChatFeed = (props) => {
         })
     }
 
-    if (!chat) return 'Loading....';
+    if(isLoading) {
+        return (
+            <div className="chat-feed">
+                <div className="loading-image main-loader"><img src={loadingAnimation} alt="" /></div>
+            </div>
+        );
+    }
+
+    if(!chat) {
+        return (
+            <div className="chat-feed">
+                <div className=" loading-image main-loader">No chats yet :&#40;...</div>
+            </div>
+        );
+    }
 
     return (
         <div className="chat-feed">

@@ -43,7 +43,6 @@ const MessageForm = (props) => {
                         className="picture-icon" 
                         style={{
                             ...{ cursor: 'pointer', position: 'relative',  fontSize: '30px' },
-                            // TODO: implement color change on hover
                             ...{ color: '#7554a0' }
                         }}
                     />
@@ -51,6 +50,7 @@ const MessageForm = (props) => {
             </label>
             <input 
                 type="file"
+                accept="image/*"  // allow only image uploads
                 multiple={false}
                 id="upload-button"
                 style={{display: 'none'}}

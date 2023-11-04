@@ -1,6 +1,6 @@
 import { ChatSettings } from "react-chat-engine";
 import { useNavigate } from 'react-router-dom';
-import { BgColorsOutlined, LoginOutlined, UserOutlined, } from "@ant-design/icons";
+import { BgColorsOutlined, GithubOutlined, LoginOutlined, UserOutlined, } from "@ant-design/icons";
 
 const CustomChatSettings = (props) => {
     const navigate = useNavigate();
@@ -13,9 +13,12 @@ const CustomChatSettings = (props) => {
     return (
         <div className="ce-custom-chat-settings-container">
             <div className="chat-settings-options">
-                <div className="theme-user-container">
-                <BgColorsOutlined className="theme-button" style={{fontSize: '30px', color: 'rgb(117,84,160)'}}/>
-                <UserOutlined className="user-button" style={{fontSize: '30px', color: 'rgb(117,84,160)'}}/>
+                <div className="theme-github-user-container">
+                <BgColorsOutlined className="settings-button" />
+                <a href="https://github.com/harrynwosu/react-chat-app" target="_blank">
+                    <GithubOutlined className="settings-button" />
+                </a>
+                <UserOutlined className="settings-button" />
                 </div>
             </div>
             <ChatSettings {...props}/>
