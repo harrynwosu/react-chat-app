@@ -13,21 +13,23 @@ const HomeRoute = ({ children }) => {
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path='/login' element={<LoginForm />} />
-        <Route 
-          path='/'
-          element = {
-            <HomeRoute>
-              <Chat />
-            </HomeRoute>
-          }
-        />
-        {/* Handle non-existent routes */}
-        <Route path='/*' element={ <Navigate to='/' /> } />
-      </Routes>
-    </Router>
+    <div className="app">
+      <Router>
+        <Routes>
+          <Route path='/login' element={<LoginForm />} />
+          <Route 
+            path='/'
+            element = {
+              <HomeRoute>
+                <Chat />
+              </HomeRoute>
+            }
+          />
+          {/* Handle non-existent routes */}
+          <Route path='/*' element={ <Navigate to='/' /> } />
+        </Routes>
+      </Router>
+    </div>
   )
 }
 

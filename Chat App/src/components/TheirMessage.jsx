@@ -17,7 +17,7 @@ const TheirMessage = ({message, lastMessage}) => {
                         style={{marginLeft: isFirstMessageByUser ? '4px' : '48px'}}
                     />
                 ) : (
-                    <div className="message" style={{float: 'left', color: '#202020b6', backgroundColor: '#FFFFFF', marginLeft: isFirstMessageByUser ? '4px' : '48px'}}>
+                    <div className="message their-msg" style={{float: 'left', marginLeft: isFirstMessageByUser ? '4px' : '48px'}}>
                         {message.text}
                     </div>
                 )
@@ -27,5 +27,7 @@ const TheirMessage = ({message, lastMessage}) => {
 }
 
 // '#CABCDC'
+// color: '#202020b6';
+// background-color: '#FFFFFF';
 
 export default TheirMessage;

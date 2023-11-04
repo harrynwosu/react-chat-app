@@ -42,8 +42,7 @@ const MessageForm = (props) => {
                     <PictureOutlined 
                         className="picture-icon" 
                         style={{
-                            ...{ cursor: 'pointer', position: 'relative',  fontSize: '30px' },
-                            ...{ color: '#7554a0' }
+                            ...{ cursor: 'pointer', position: 'relative',  fontSize: '30px' }
                         }}
                     />
                 </span>

@@ -11,53 +11,55 @@
 :root {
   --margin-top: 20px;
   --active-hover: #3b2a50;
+  --active-chat-color: #cabcdc;
   --app-bg-color: rgb(240, 240, 240);
+  --bg-input: rgb(240, 240, 240);
+  --chat-subtitle-text: #595959;
   --facebook-gradient: linear-gradient(to right, #0A2C6B,  #0D3D8C, #256BBE, #FFFFFF);
   --form-icon-font: 30px;
+  --form-icon-color: #7554a0;
+  --form-icon-hover-color: #3b2a50;
   --google-gradient: linear-gradient(to right, #4285F4, #EA4335, #FBBC05, #34A853);
   --icons-color: rgb(117,84,160);
   --login-button-text: white;
   --logout-color: red;
-  --own-message-color: #7554a0;
+  --msg-input-border: 1px solid #3b2a50;
+  --options-text-color: #000000;
+  --own-msg-color: #7554a0;
+  --own-msg-text-color: rgba(255, 255, 255, 0.877);
   --settings-icons-font: 30px;
+  --settings-icons-color: rgb(117,84,160);
   --subtitle-color: #7554a0;
-  --their-message-color: #FFFFFF;
+  --their-msg-color: #FFFFFF;
+  --their-msg-text-color: rgba(255, 255, 255, 0.705);
   --title-color: #7554a0;
-
-  // --icons-color: #f8eded73;
-  --new-chat-focus: #5e64759f;
-  
-  
-  --own-msg-color: #726dfe;
-  --their-message-text-color: rgba(255, 255, 255, 0.705);
-  // --title-color: rgba(255, 255, 255, 0.925);
-  --message-text-color: rgba(255, 255, 255, 0.877);
 }
 
 .dark {
   --margin-top: 20px;
   --active-hover: #3b2a50;
-  --app-bg-color: rgb(240, 240, 240);
-  --bg-color: rgb(240, 240, 240);
+  --active-chat-color: #726dfe;
+  --app-bg-color: #404757;
+  --bg-input: #4e5566;
+  --chat-subtitle-text: #9c9c9c;
   --facebook-gradient: linear-gradient(to right, #0A2C6B,  #0D3D8C, #256BBE, #FFFFFF);
+  --form-icon-color: #726dfe;
   --form-icon-font: 30px;
+  --form-icon-hover-color: #7554a0;
   --google-gradient: linear-gradient(to right, #0A2C6B,  #0D3D8C, #256BBE, #FFFFFF);
-  --icons-color: rgb(117,84,160);
+  --icons-color: #726dfe; // look into this
+  --login-button-text: white;
   --logout-color: red;
-  --own-message-color: #7554a0;
-  --settings-icons-font: 30px;
-  --subtitle-color: #7554a0;
-  --their-message-color: #FFFFFF;
-  --title-color: #7554a0;
-
-  // --icons-color: #f8eded73;
-  --new-chat-focus: #5e64759f;
-  
-  
+  --msg-input-border: none;
+  --options-text-color: rgba(255, 255, 255, 0.925);
   --own-msg-color: #726dfe;
-  --their-message-text-color: rgba(255, 255, 255, 0.705);
-  // --title-color: rgba(255, 255, 255, 0.925);
-  --message-text-color: rgba(255, 255, 255, 0.877);
+  --own-msg-text-color:rgba(255, 255, 255, 0.877);
+  --settings-icons-font: 30px;
+  --settings-icons-color: rgba(255, 255, 255, 0.925);
+  --subtitle-color: rgba(255, 255, 255, 0.925);
+  --their-msg-color: #535a6d;
+  --their-msg-text-color: #202020b6;
+  --title-color: rgba(255, 255, 255, 0.925);
 }
 
 /* CHAT STYLES */
@@ -67,30 +69,42 @@
 }
 
 .ce-chat-list {
-  background-color: rgb(240, 240, 240) !important;
+  background-color: var(--app-bg-color) !important;
 }
 
 .ce-chats-container {
-  background-color: rgb(240, 240, 240) !important;
+  background-color: var(--app-bg-color) !important;
 }
 
 .ce-active-chat-card {
-  background-color: #cabcdc !important;
-  border: 4px solid #cabcdc !important;
+  background-color: var(--active-chat-color) !important;
+  border: 4px solid var(--active-chat-color) !important;
   border-radius: 0px !important;
 }
 
+.ce-person-text {
+  color: var(--options-text-color);
+}
+
+.ce-chat-title-text {
+  color: var(--options-text-color);
+}
+
 .ce-chat-subtitle-text {
-  color: #595959 !important;
+  color: var(--chat-subtitle-text) !important;
 }
 
 .ce-chat-form-container {
   padding-bottom: 20px !important;
+  color: var(--options-text-color);
+  background-color: var(--app-bg-color) !important;
 }
 
 .ce-text-input {
   border-radius: 6px !important;
   border: 1px solid #3b2a50 !important;
+  color: var(--options-text-color);
+  background-color: var(--bg-input) !important;
 }
 
 .ce-primary-button {
@@ -106,18 +120,19 @@
 }
 
 .ce-settings {
-  background-color: rgb(240, 240, 240) !important;
+  background-color: var(--app-bg-color) !important;
 }
 
 .ce-autocomplete-input {
   border-radius: 6px !important;
   border: 1px solid #3b2a50 !important;
+  background-color: var(--bg-input) !important;
 }
 
 .ce-autocomplete-options {
   border-radius: 6px !important;
   border: 1px solid #3b2a50 !important;
-  background-color: white !important;
+  background-color: var(--app-bg-color) !important;
 }
 
 .ce-chat-settings-container {
@@ -130,4 +145,14 @@
 
 .ce-custom-chat-settings-container {
   height: calc(100% - 72px);
+  background-color: var(--app-bg-color) !important;
+}
+
+.ce-section-title-container, #ce-options-drop-down {
+  color: var(--options-text-color);
+  background-color: var(--app-bg-color) !important;
+}
+
+#new-chat-plus-button {
+  background-color: var(--own-msg-color) !important;
 }

@@ -31,6 +31,7 @@
     cursor: pointer;
     border-radius: 6px !important;
     border: 1px solid red !important;
+    background-color: var(--app-bg-color);
 }
 
 .logout-button:hover {
@@ -41,5 +42,5 @@
 .settings-button {
     cursor: pointer;
     font-size: var(--settings-icons-font) !important;
-    color: var(--icons-color) !important;
+    color: var(--settings-icons-color) !important;
 }
